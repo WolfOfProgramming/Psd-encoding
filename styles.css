@@ -14,7 +14,7 @@
 }
 
 .header {
-    padding: 20px 15%;
+    padding: 20px 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,29 +90,68 @@
     right: 0;
     top: 0;
     height: 100vh;
-    width: 250px;
-    transform: translateX(250px);
-    background: #130f40;
-    transition: transform 300ms 100ms ease-in-out;
-}
-
-.navbar__list {
-    list-style: none;
+    width: calc(20vw - 10px);
+    transform: translateX(calc(20vw - 10px));
+    background: #2f3542;
+    opacity: 0.1;
+    transition: 400ms 100ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
 }
 
 .navbar--active {
     transform: translateX(0px);
+    opacity: 0.9;
+}
+
+.navbar__menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 10%;
+    font-size: 2.5em;
+    transition: 300ms 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.navbar__ul {
+    list-style: none;
+    padding: 5%;
+}
+
+.navbar__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__item {
+    font-size: 2em;
+    text-align: right;
+    margin: 10px;
+    padding: 10px;
+    transition: 300ms 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.navbar__item:hover,
+.navbar__menu:hover {
+    filter: opacity(30%);
 }
 
 .container {
     width: 100%;
-    height: 70vh;
+    height: 85vh;
     background: url('images/yellowstone.jpg') no-repeat center;
     object-fit: cover;
 }
 
 .header__text__container {
-    padding: 20px 15%;
+    padding: 20px 20%;
+    margin-top: 5%;
 }
 
 .header__text {
