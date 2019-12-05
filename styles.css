@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    --black: #2d3436;
+    --white: #ffffff;
+}
+
+:root {
+    overflow: hidden;
+}
+
+.header {
+    padding: 20px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main__header {
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.hamburger {
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.hamburger__box {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 35px;
+}
+.hamburger__span,
+.hamburger__span::after,
+.hamburger__span::before {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: var(--white);
+    left: 0;
+}
+.hamburger__span {
+    top: 50%;
+    transform: translateY(-50%);
+    transition:  200ms 100ms ease-in-out
+}
+
+.hamburger__span::after,
+.hamburger__span::before {
+    position: absolute;
+    content: '';
+    transition: transform 300ms 100ms ease-in-out;
+}
+
+.hamburger__span::before {
+    transform: translateY(10px);
+}
+
+.hamburger__span::after{
+    transform: translateY(-10px);
+}
+
+.hamburger--active .hamburger__span {
+    background: transparent;
+}
+
+.hamburger--active .hamburger__span::after {
+    transform: translateY(0px) rotate(-45deg); 
+}
+
+.hamburger--active .hamburger__span::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+.navbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    transform: translateX(250px);
+    background: #130f40;
+    transition: transform 300ms 100ms ease-in-out;
+}
+
+.navbar__list {
+    list-style: none;
+}
+
+.navbar--active {
+    transform: translateX(0px);
+}
+
+.container {
+    width: 100%;
+    height: 70vh;
+    background: url('images/yellowstone.jpg') no-repeat center;
+    object-fit: cover;
+}
+
+.header__text__container {
+    padding: 20px 15%;
+}
+
+.header__text {
+    color: var(--white);
+    font-size: 70px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.header__text--blue {
+    color: #22a6b3;
+}
