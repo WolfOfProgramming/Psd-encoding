@@ -10,7 +10,14 @@
 }
 
 :root {
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 85vh;
+    background: url('images/yellowstone.jpg') no-repeat center;
+    object-fit: cover;
 }
 
 .header {
@@ -86,7 +93,7 @@
 }
 
 .navbar {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     height: 100vh;
@@ -128,6 +135,17 @@
     align-items: center;
 }
 
+.navbar__social__item {
+    margin: 15px;
+    cursor: pointer;
+    transition: 300ms 100ms ease-in-out;
+}
+
+.navbar__social__item:hover {
+    background-color: #7ed6df;
+    opacity: 0.7;
+}
+
 .navbar__item {
     font-size: 2em;
     text-align: right;
@@ -142,11 +160,12 @@
     filter: opacity(30%);
 }
 
-.container {
-    width: 100%;
-    height: 85vh;
-    background: url('images/yellowstone.jpg') no-repeat center;
-    object-fit: cover;
+.icon--light {
+    background: var(--black);
+}
+
+.icon--dark {
+    background: var(--white);
 }
 
 .header__text__container {
@@ -163,4 +182,90 @@
 
 .header__text--blue {
     color: #22a6b3;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15%;
+    align-items: center;
+}
+
+.section {
+    min-height: 700px;
+    object-fit: cover;
+    opacity: 0.8;
+    margin-top: 7%;
+}
+
+.parralaxSection {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.parralaxSection--right {
+    justify-content: right;
+}
+
+.parallaxDiv {
+    background: white;
+    width: 45%;
+    padding: 3.5em;
+}
+
+.section__header {
+    font-size: 2.2em;
+}
+
+.section__paragraph {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.section1 {
+    background: url('images/canyon.jpg');
+}
+
+.section2 {
+    background: url('images/clouds-3291565_1920.jpg');
+}
+
+.section3 {
+    background: url('images/evening.jpg');
+}
+
+.footer {
+    padding: 30px 20%;
+}
+
+.foter__socialMediaIcons,
+.footer__list,
+.footer__nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.footer__image,
+.footer__nav__item,
+.footer__socialMediaIcons__item {
+    transition: 300ms 100ms ease-in-out;
+    cursor: pointer;
+}
+
+.footer__nav__item {
+    margin: 0 10px;
+}
+
+.footer__socialMediaIcons__item {
+    margin: 15px;
+}
+
+.footer__socialMediaIcons__item:hover,
+.footer__nav__item:hover,
+.footer__image:hover {
+    background: #7ed6df;
+    opacity: 0.7;
 }
