@@ -35,3 +35,4 @@ arrowRight.addEventListener('click', () => {
     currentCarouselElement === 4 ? currentCarouselElement = 0 :  currentCarouselElement++;
     moveCarousel(currentCarouselElement, carouselSlideWidth);
 });
+

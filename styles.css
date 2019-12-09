@@ -26,6 +26,7 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 .main__header {
@@ -42,6 +43,10 @@
     margin: 0;
     padding: 20px;
     cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 20%;
+    z-index: 15;
 }
 
 .hamburger__box {
@@ -203,6 +208,7 @@
     justify-content: start;
     align-items: center;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .parralaxSection--right {
@@ -235,6 +241,7 @@
 .section4 {
     position: relative;
     display: flex;
+    margin: 25% 0 0 0;
 }
 
 .section4::after,
@@ -299,12 +306,15 @@
 
 .section5 {
     width: 100%;
+    min-height: 500px;
+    margin: 25% 0 15% 0;
 }
 
-.section__header {
+.section__header__clients {
     text-align: center;
     font-size: 3em;
     font-weight: 400;
+    padding: 1.3em;
 }
 
 .carousel {
@@ -351,7 +361,7 @@
     content: '';
     position: absolute;
     width: 15%;
-    height: 20%;
+    height: 30%;
     top: 0;
     left: 0;
     border-top: 3px solid #f9ca24;
@@ -404,7 +414,9 @@
 
 .section6 {
     position: relative;
+    margin: 10% 0;
     width: 100%;
+    padding: 5%;
 }
 
 .section__news {
@@ -412,12 +424,81 @@
     position: absolute;
     left: 15%;
     font-weight: 400;
+    top: 0;
 }
 
 .section__textNews {
     width: 100%;
     display: flex;
-    margin-top: 5%
+    margin-top: 5%;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.section__textNews::before {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 80%;
+    bottom: -30%;
+    right: 20%;
+    z-index: 2;
+    background: #ff9ff3;
+    opacity: 0.3;
+}
+
+.section__textNews__div {
+    width: 70%;
+    border-width: 2px 0 2px 2px;
+    border-style: solid;
+    border-color: black;
+    padding: 8%;
+}
+
+.textInformation__header {
+    font-size: 2em;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.textInformation__date {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.textInformation__description {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 1.3;
+    text-align: justify;
+}
+
+.textInformation__readMore {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #e1b12c;
+    text-align: end;
+    text-decoration: none;
+}
+
+.textInformation__readMore:hover,
+.textInformation__readMore:focus {
+    filter: hue-rotate(180deg);
+}
+
+.section__newsImage {
+    width: 30%;
+    object-fit: cover;
+    position: absolute;
+    height: 140%;
+    top: -20%;
+    right: 0;
+    z-index: 3;
 }
 
 .footer {
