@@ -204,10 +204,6 @@
     margin-top: 7%;
 }
 
-.parralaxSection--right {
-    justify-content: right;
-}
-
 .parallaxDiv {
     background: white;
     width: 45%;
@@ -539,3 +535,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.parralaxSection--right {
+    justify-content: right;
+}
+
